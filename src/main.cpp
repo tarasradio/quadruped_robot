@@ -30,15 +30,15 @@ const int ALLSERVOS = 8; //
 
 // Servo zero position 
 // ----------------------------- G14, G12, G13, G15, G16,  G5,  G4,  G2,  ms
-int Servo_Act_0 [ ] = {  135,  45, 135,  45,  45, 135,  45, 135,  500  };
+const int16_t Servo_Act_0 [ ] PROGMEM = {  135,  45, 135,  45,  45, 135,  45, 135,  500  };
 
 // Start position 
 // ----------------------------- G14, G12, G13, G15, G16,  G5,  G4,  G2,  ms
-int Servo_Act_1 [ ]  = {  135,  45, 135,  45,  45, 135,  45, 135,  500  };
+const int16_t Servo_Act_1 [ ] PROGMEM = {  135,  45, 135,  45,  45, 135,  45, 135,  500  };
 
 // Standby 
 int programStandbySteps = 2;
-int programStandby [][ALLMATRIX] = {
+const int16_t programStandby [][ALLMATRIX] PROGMEM = {
   // G14, G12, G13, G15, G16,  G5,  G4,  G2,  ms
   {   90,  90,  90,  90,  90,  90,  90,  90,  500  }, // servo center point
   {   70,  90,  90, 110, 110,  90,  90,  70,  500  }, // standby
@@ -46,7 +46,7 @@ int programStandby [][ALLMATRIX] = {
 
 // Forward 
 int programForwardSteps = 11;
-int programForward [][ALLMATRIX] = {
+const int16_t programForward [][ALLMATRIX] PROGMEM = {
   // G14, G12, G13, G15, G16,  G5,  G4,  G2,  ms
   {   70,  90,  90, 110, 110,  90,  90,  70,  150  }, // standby
   {   90,  90,  90, 110, 110,  90,  45,  90,  150  }, // leg1,4 up; leg4 fw
@@ -63,7 +63,7 @@ int programForward [][ALLMATRIX] = {
 
 // Backward 
 int programBackwardSteps = 11;
-int programBackward [][ALLMATRIX] = {
+const int16_t programBackward [][ALLMATRIX] PROGMEM = {
   // G14, G12, G13, G15, G16,  G5,  G4,  G2,  ms
   {   70,  90,  90, 110, 110,  90,  90,  70,  150  }, // standby
   {   90,  45,  90, 110, 110,  90,  90,  90,  150  }, // leg4,1 up; leg1 fw
@@ -80,7 +80,7 @@ int programBackward [][ALLMATRIX] = {
 
 // Left shift 
 int programLeftShiftSteps = 11;
-int programLeftShift [][ALLMATRIX] = {
+const int16_t programLeftShift [][ALLMATRIX] PROGMEM = {
   // G14, G12, G13, G15, G16,  G5,  G4,  G2,  ms
   {   70,  90,  90, 110, 110,  90,  90,  70,  150  }, // standby
   {   70,  90,  50,  90,  90,  90,  90,  70,  150  }, // leg3,2 up; leg2 fw
@@ -97,7 +97,7 @@ int programLeftShift [][ALLMATRIX] = {
 
 // Right shift 
 int programRightShiftSteps = 11;
-int programRightShift [][ALLMATRIX] = {
+const int16_t programRightShift [][ALLMATRIX] PROGMEM = {
   // G14, G12, G13, G15, G16,  G5,  G4,  G2,  ms
   {   70,  90,  90, 110, 110,  90,  90,  70,  150  }, // standby
   {   70,  90,  90,  90,  90,  50,  90,  70,  150  }, // leg2,3 up; leg3 fw
@@ -114,7 +114,7 @@ int programRightShift [][ALLMATRIX] = {
 
 // Turn left 
 int programTurnLeftSteps = 8;
-int programTurnLeft [][ALLMATRIX] = {
+const int16_t programTurnLeft [][ALLMATRIX] PROGMEM = {
   // G14, G12, G13, G15, G16,  G5,  G4,  G2,  ms
   {   70,  90,  90, 110, 110,  90,  90,  70,  150  }, // standby
   {   90,  90,  90, 110, 110,  90,  90,  90,  150  }, // leg1,4 up
@@ -128,7 +128,7 @@ int programTurnLeft [][ALLMATRIX] = {
 
 // Turn right 
 int programTurnRightSteps = 8;
-int programTurnRight [][ALLMATRIX] = {
+const int16_t programTurnRight [][ALLMATRIX] PROGMEM = {
   // G14, G12, G13, G15, G16,  G5,  G4,  G2,  ms
   {   70,  90,  90, 110, 110,  90,  90,  70,  150  }, // standby
   {   70,  90,  90,  70,  70,  90,  90,  70,  150  }, // leg2,3 up
@@ -142,14 +142,14 @@ int programTurnRight [][ALLMATRIX] = {
 
 // Lie 
 int programLieSteps = 1;
-int programLie [][ALLMATRIX] = {
+const int16_t programLie [][ALLMATRIX] PROGMEM = {
   // G14, G12, G13, G15, G16,  G5,  G4,  G2,  ms
   {  110,  90,  90,  70,  70,  90,  90, 110,  500  }, // leg1,2,3,4 up
 };
 
 // Say Hi 
 int programSayHiSteps = 11;
-int programSayHi [][ALLMATRIX] = {
+const int16_t programSayHi [][ALLMATRIX] PROGMEM = {
   // G14, G12, G13, G15, G16,  G5,  G4,  G2,  ms
   {  120,  90,  90, 110,  60,  90,  90,  70,  400}, // leg1, 3 down
   {   70,  90,  90, 110, 110,  90,  90,  70,  400}, // standby
@@ -167,7 +167,7 @@ int programSayHi [][ALLMATRIX] = {
 
 // Fighting (fighting stance)
 int programFightingSteps = 11;
-int programFighting [][ALLMATRIX] = {
+const int16_t programFighting [][ALLMATRIX] PROGMEM = {
   // G14, G12, G13, G15, G16,  G5,  G4,  G2,  ms
   {  120,  90,  90, 110,  60,  90,  90,  70,  500  }, // leg1, 2 down
   {  120,  70,  70, 110,  60,  70,  70,  70,  500  }, // body turn left
@@ -184,7 +184,7 @@ int programFighting [][ALLMATRIX] = {
 
 // Push up
 int programPushUpSteps = 11;
-int programPushUp [][ALLMATRIX] = {
+const int16_t programPushUp [][ALLMATRIX] PROGMEM = {
   // G14, G12, G13, G15, G16,  G5,  G4,  G2,  ms
   {   70,  90,  90, 110, 110,  90,  90,  70,  500  }, // start
   {  100,  90,  90,  80,  80,  90,  90, 100,  600  }, // down
@@ -201,7 +201,7 @@ int programPushUp [][ALLMATRIX] = {
 
 // Sleep (sleeping position)
 int programSleepSteps = 2;
-int programSleep [][ALLMATRIX] = {
+const int16_t programSleep [][ALLMATRIX] PROGMEM = {
   // G14, G12, G13, G15, G16,  G5,  G4,  G2,  ms
   {   30,  90,  90, 150, 150,  90,  90,  30,  500  }, // leg1,4 dn
   {   30,  45, 135, 150, 150, 135,  45,  30,  500  }, // protect myself
@@ -209,7 +209,7 @@ int programSleep [][ALLMATRIX] = {
 
 // Dance steps 1
 int ProgramDance1Steps = 10;
-int ProgramDance1 [][ALLMATRIX] = {
+const int16_t ProgramDance1 [][ALLMATRIX] PROGMEM = {
   // G14, G12, G13, G15, G16,  G5,  G4,  G2,  ms
   {   90,  90,  90,  90,  90,  90,  90,  90,  400  }, // leg1,2,3,4 up
   {   50,  90,  90,  90,  90,  90,  90,  90,  400  }, // leg1 dn
@@ -225,7 +225,7 @@ int ProgramDance1 [][ALLMATRIX] = {
 
 // Dance steps 2
 int ProgramDance2Steps = 9;
-int ProgramDance2 [][ALLMATRIX] = {
+const int16_t ProgramDance2 [][ALLMATRIX] PROGMEM = {
   // G14, G12, G13, G15, G16,  G5,  G4,  G2,  ms
   {   70,  45, 135, 110, 110, 135,  45,  70,  400  }, // leg1,2,3,4 two sides
   {  115,  45, 135,  65, 110, 135,  45,  70,  400  }, // leg1,2 up
@@ -240,7 +240,7 @@ int ProgramDance2 [][ALLMATRIX] = {
 
 // Dance steps 3
 int ProgramDance3Steps = 10;
-int ProgramDance3 [][ALLMATRIX] = {
+const int16_t ProgramDance3 [][ALLMATRIX] PROGMEM = {
   // G14, G12, G13, G15, G16,  G5,  G4,  G2,  ms
   {   70,  50,  50, 110, 110, 135, 135,  70,  400  }, // leg1,2,3,4 bk
   {  110,  50,  50,  60,  70, 135, 135,  70,  400  }, // leg1,2,3 up
@@ -264,7 +264,7 @@ void servo_write(uint8_t s, int angle) {
 
 void go_home() {
   for(int s = 0; s < 8; s++) {
-    int angle = Servo_Act_0[s];
+    int angle = pgm_read_word(&Servo_Act_0[s]);
     servo_write(s, angle);
     servos_positions[s] = angle;
   }
@@ -272,16 +272,16 @@ void go_home() {
 
 #define TICK_PERIOD 10
 
-void runProgram(int program[][ALLMATRIX], int programSteps) {
+void runProgram(const int16_t program[][ALLMATRIX], int programSteps) {
   int c_angle, t_angle, n_angle = 0;
   for(int i = 0 ; i < programSteps; i++) {
-    int totalPeriod = program[i][8]; // общее время выполнения итерации
+    int totalPeriod = pgm_read_word(&program[i][8]) ; // общее время выполнения итерации
     int totalPeriodCounter = totalPeriod / TICK_PERIOD; // число отсчетов (делим общее время на шаг по времени)
 
     for(int t = 0; t < totalPeriodCounter; t++) {
       for(int j = 0; j < 8; j++) {
         c_angle = servos_positions[j];
-        t_angle = program[i][j];
+        t_angle = pgm_read_word(&program[i][j]);
 
         if(c_angle == t_angle) {
           n_angle = t_angle;
@@ -301,7 +301,7 @@ void runProgram(int program[][ALLMATRIX], int programSteps) {
     }
 
     for (int j = 0; j < 8; j++) {
-      servos_positions[j] = program[i][j];
+      servos_positions[j] = pgm_read_word(&program[i][j]);
     }
   }
 }
